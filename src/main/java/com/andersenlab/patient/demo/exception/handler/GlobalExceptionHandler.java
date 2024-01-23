@@ -19,7 +19,7 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler(MethodArgumentNotValidException.class)
     @ResponseStatus(HttpStatus.BAD_REQUEST)
-    ExceptionResponseDto handleMethodArgumentNotValidException(MethodArgumentNotValidException e) {
+    public ExceptionResponseDto handleMethodArgumentNotValidException(MethodArgumentNotValidException e) {
 
         String errorMessage = e.getBindingResult()
                 .getFieldErrors().stream()
@@ -36,7 +36,7 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler(ConstraintViolationException.class)
     @ResponseStatus(HttpStatus.BAD_REQUEST)
-    ExceptionResponseDto handleConstraintViolationException(ConstraintViolationException e) {
+    public ExceptionResponseDto handleConstraintViolationException(ConstraintViolationException e) {
 
         String errorMessage = e.getConstraintViolations()
                 .stream()
@@ -56,7 +56,7 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler(NameNotUniqueException.class)
     @ResponseStatus(HttpStatus.CONFLICT)
-    ExceptionResponseDto handleNameNotUniqueException(NameNotUniqueException e) {
+    public ExceptionResponseDto handleNameNotUniqueException(NameNotUniqueException e) {
         return ExceptionResponseDto.builder()
                 .statusCode(HttpStatus.CONFLICT.value())
                 .message(HttpStatus.CONFLICT.getReasonPhrase())
@@ -67,7 +67,7 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler(NoActivePatientsException.class)
     @ResponseStatus(HttpStatus.NOT_FOUND)
-    ExceptionResponseDto handleNoActivePatientsException(NoActivePatientsException e) {
+    public ExceptionResponseDto handleNoActivePatientsException(NoActivePatientsException e) {
         return ExceptionResponseDto.builder()
                 .statusCode(HttpStatus.NOT_FOUND.value())
                 .message(HttpStatus.NOT_FOUND.getReasonPhrase())
@@ -78,7 +78,7 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler(PatientNotFound.class)
     @ResponseStatus(HttpStatus.NOT_FOUND)
-    ExceptionResponseDto handlePatientNotFound(PatientNotFound e) {
+    public ExceptionResponseDto handlePatientNotFound(PatientNotFound e) {
         return ExceptionResponseDto.builder()
                 .statusCode(HttpStatus.NOT_FOUND.value())
                 .message(HttpStatus.NOT_FOUND.getReasonPhrase())
