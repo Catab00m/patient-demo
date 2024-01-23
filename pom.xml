@@ -127,6 +127,8 @@
                 </configuration>
             </plugin>
         </plugins>
+
+        <finalName>patient-demo</finalName>
     </build>
 
 </project>

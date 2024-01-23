@@ -1,4 +1,18 @@
 services:
+  app:
+    image: patient-demo:latest
+    container_name: patient-demo
+    build: .
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgresDB:5432/patientDB
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: postgres
+    depends_on:
+      postgresDB:
+        condition: service_healthy
+    ports:
+      - '8181:8181'
+
   postgresDB:
     image: postgres:latest
     container_name: postgresDB
