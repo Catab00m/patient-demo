@@ -1,0 +1,32 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-table-patients
+      author: Artem Astakhov
+      changes:
+        - createTable:
+            tableName: patient
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: name
+                  type: VARCHAR(255)
+                  constraints:
+                    unique: true
+              - column:
+                  name: birthday
+                  type: DATE
+              - column:
+                  name: temperature
+                  type: DOUBLE
+              - column:
+                  name: pulse
+                  type: INT
+              - column:
+                  name: deleted
+                  type: BOOLEAN
