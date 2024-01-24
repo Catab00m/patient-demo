@@ -4,7 +4,7 @@ INSERT INTO public.patient (name, birthday, temperature, pulse, deleted) VALUES 
 INSERT INTO public.patient (name, birthday, temperature, pulse, deleted) VALUES ('Betty', '1985-02-13', 41.1, 34, false);
 INSERT INTO public.patient (name, birthday, temperature, pulse, deleted) VALUES ('Ori', '2003-12-31', 35.6, 55, false);
 INSERT INTO public.patient (name, birthday, temperature, pulse, deleted) VALUES ('Perry', '1978-10-06', 36.8, 73, false);
-INSERT INTO public.patient (name, birthday, temperature, pulse, deleted) VALUES ('Zigfrid', '1990-05-05', 36.0, 80, false);
-INSERT INTO public.patient (name, birthday, temperature, pulse, deleted) VALUES ('Hannibal', '1989-07-01', 37.0, 74, false);
+INSERT INTO public.patient (name, birthday, temperature, pulse, deleted) VALUES ('Zigfrid', '1990-05-05', 36.2, 80, false);
+INSERT INTO public.patient (name, birthday, temperature, pulse, deleted) VALUES ('Hannibal', '1989-07-01', 37.1, 74, false);
 INSERT INTO public.patient (name, birthday, temperature, pulse, deleted) VALUES ('Will', '1996-08-05', 36.5, 63, false);
 INSERT INTO public.patient (name, birthday, temperature, pulse, deleted) VALUES ('Carry', '1998-06-01', 36.6, 70, false);
